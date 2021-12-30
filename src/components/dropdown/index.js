@@ -10,10 +10,11 @@ import {
     Dimensions,
     Platform,
     ViewPropTypes,
+    TextInput,
     I18nManager,
 } from 'react-native';
 import Ripple from 'react-native-material-ripple';
-import { TextInput } from 'react-native-paper';
+
 
 import DropdownItem from '../item';
 import styles from './styles';
@@ -506,7 +507,7 @@ export default class Dropdown extends PureComponent {
 
         return (
             <TextInput
-                style={{backgroundColor: "transparent", marginBottom: 16}}
+                style={[{backgroundColor: "transparent",color:'#000',},this.props.textInputStyle]}
                 label=''
                 {...props}
                 value={title}
